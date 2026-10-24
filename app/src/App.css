@@ -1,0 +1,92 @@
+/* WildTrace dashboard — Leaflet theming to match the dark forest palette. */
+
+/* Render the light OSM raster in a dark palette without harming vector layers. */
+.wildtrace-tiles {
+  filter: invert(1) hue-rotate(180deg) brightness(0.86) contrast(0.92) saturate(0.75);
+}
+
+.leaflet-container {
+  background: #0a120e;
+  font-family: 'Inter', system-ui, sans-serif;
+  outline: none;
+}
+
+/* Zoom controls */
+.leaflet-bar {
+  border: 1px solid #24362c !important;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5) !important;
+}
+
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  background: #0c1611;
+  color: #cbd5e1;
+  border-bottom-color: #24362c;
+}
+
+.leaflet-bar a:hover {
+  background: #132119;
+}
+
+.leaflet-bar a.leaflet-disabled {
+  background: #0c1611;
+  color: #475569;
+}
+
+/* Attribution */
+.leaflet-control-attribution {
+  background: rgba(8, 17, 13, 0.82) !important;
+  color: #64748b !important;
+  backdrop-filter: blur(4px);
+}
+
+.leaflet-control-attribution a {
+  color: #34d399 !important;
+}
+
+/* Popups */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #0c1611;
+  color: #e2e8f0;
+  border: 1px solid #24362c;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.leaflet-popup-content strong {
+  color: #34d399;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: #94a3b8;
+}
+
+/* Tooltips */
+.leaflet-tooltip {
+  background: #0c1611;
+  color: #e2e8f0;
+  border: 1px solid #24362c;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  font-size: 11px;
+}
+
+.leaflet-tooltip-top::before {
+  border-top-color: #24362c;
+}
+.leaflet-tooltip-bottom::before {
+  border-bottom-color: #24362c;
+}
+.leaflet-tooltip-left::before {
+  border-left-color: #24362c;
+}
+.leaflet-tooltip-right::before {
+  border-right-color: #24362c;
+}
